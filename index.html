@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo&family=Old+Standard+TT:ital@1&family=Oswald:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Kanto Pokemons</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img class="logo-img" src="logo-img.png" />
+      </div>
+
+      <div class="navigation">
+        <input type="checkbox" class="toggle-menu" />
+        <div class="hamburguer"></div>
+
+        <div id="myMenu">
+          <a href="https://pokeapi.co">PokeApi</a>
+          <a href="https://github.com/serjsouzar">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <form>
+        <input
+          type="text"
+          name="inputPokemon"
+          id="search"
+          placeholder="Search..."
+          value=""
+        />
+      </form>
+    </div>
+    <div class="cards-container">
+      <div id="cards"></div>
+    </div>
+
+    <footer class="foo">
+      <h2>Powered by</h2>
+      <img
+        src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
+      />
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

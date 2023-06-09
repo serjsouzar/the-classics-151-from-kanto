@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 40px;
+  align-items: center;
+  background-color: burlywood;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+}
+
+.logo-img{
+  width: 90px;
+  height: 90px;
+  padding-left: 65px;
+}
+
+#myMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+#myMenu a {
+  display: block;
+  padding: 40px 25px;
+  font-size: 15px;
+  line-height: 1;
+  transition: 0.2s;
+}
+
+#myMenu a:hover {
+  box-shadow: 0 -5px 0px #ccc inset,
+  500px 0 0 rgba(255,255,255, 0.09) inset;
+  padding: 35px 25px 45px 25px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburguer {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.2s;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.hamburguer:before {
+  top: -10px; 
+  width: 30px
+}
+
+.hamburguer:after {
+  top: 10px; 
+  width: 30px
+}
+
+.toggle-menu {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hamburguer,
+.toggle-menu {
+  display: none;
+}
+
+.navigation input:checked ~ .hamburguer {
+  background: transparent;
+}
+
+.navigation input:checked ~ .hamburguer:before {
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px
+}
+
+.navigation input:checked ~ .hamburguer:after {
+  top: 0;
+  transform: rotate(45deg);
+  width: 30px
+}
+
+body {
+  background-image: url("https://64.media.tumblr.com/63c67a7649315af364f7a22f254a7564/tumblr_nm1e2pW5NK1qk9nv0o1_1280.pnj");
+}
+
+h1 {
+  text-align: center;
+}
+
+#search {
+  text-align: center;
+  padding: 8px;
+}
+
+.form-section form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-section label {
+  font-weight: bolder;
+}
+
+.form-section input {
+  height: 25px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  width: 900px;
+  gap: 100px;
+}
+
+/*code below selects the 3 first childs of #cards
+#cards div:nth-child(-n+3) {
+  margin-top: 0;
+}
+*/
+
+#cards .card {
+  margin-top: 30px;
+  width: 200px;
+  height: 165px;
+  border: 5px solid yellow;
+  border-radius: 10px;
+  box-shadow: 5px 8px 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nameAndTypeField {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.imageField {
+  border-radius: 65%;
+  width: 134px;
+  background: azure;
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  margin-left: 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+#cards img {
+  width: 90px;
+  height: 89px;
+  padding: 12px
+}
+
+#cards p {
+  background: azure;
+  width: 95px;
+  border-radius: 9px;
+  margin-right: 1px;
+  font-size: small;
+}
+
+.foo {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 40px;
+}
+
+.foo img {
+  width: 100px;
+}
+
+.navigation input:checked ~ #myMenu {
+  right: 0;
+  box-shadow: -20px 0 40px rgba(0,0,0, 0.3);
+}
+
+#myMenu a {
+  font-family: Heebo;
+  font-size: 20px;
+  color: #fff;
+}
+
+#myMenu a {
+  text-decoration: none;
+}
+
+
+@media (max-width: 700px) {
+
+  .logo-img{
+    width: 65px;
+    height: 65px;
+    padding-left: 15px;
+  }
+
+  .imageField {
+    margin-left: 23px;
+  }
+
+  .hamburguer,
+  .toggle-menu {
+    display: block;
+    margin-right: 35px;
+  }
+
+  .header {
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+  }
+
+  #myMenu {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background-color: burlywood;
+    width: 300px;
+    height: 100%;
+    padding-top: 65px;
+  }
+
+  #myMenu a,
+  #myMenu a:hover {
+    width: 82%;
+    padding: 30px;
+    font-size: 24px;
+    box-shadow:  0 1px 0 rgba(255,255,255, 0.1) inset;
+  }
+
+  .nav-bar {
+    overflow: hidden;
+    position: relative;
+  }
+
+  #myMenu a {
+    text-decoration: none;
+  }
+
+  .nav-bar #myMenu {
+    display: none;
+  }
+
+  #cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 500px;
+  }
+
+  #cards .card {
+    margin-top: 30px;
+    width: 180px;
+    height: 165px;
+    border: 5px solid yellow;
+    border-radius: 10px;
+  }
+}
